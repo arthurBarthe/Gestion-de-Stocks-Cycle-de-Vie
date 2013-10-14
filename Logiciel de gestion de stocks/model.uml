@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_NLnKsDT1EeOzOeovi9luYQ" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_xulGcDT3EeOzOeovi9luYQ" name="Categorie">
+    <ownedAttribute xmi:id="_0gUOQDT3EeOzOeovi9luYQ" name="nom" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0ghCkDT3EeOzOeovi9luYQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0ghpoDT3EeOzOeovi9luYQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ZFtd0DT4EeOzOeovi9luYQ" name="property2" visibility="package">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZF5EADT4EeOzOeovi9luYQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZF5EATT4EeOzOeovi9luYQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lk9MwDT4EeOzOeovi9luYQ" name="Produit">
+    <generalization xmi:id="_HFSI0DT5EeOzOeovi9luYQ" general="_xulGcDT3EeOzOeovi9luYQ"/>
+    <ownedAttribute xmi:id="_nhS9oDT4EeOzOeovi9luYQ" name="prix" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_3U1H0DT4EeOzOeovi9luYQ" name="Produit">
+      <ownedParameter xmi:id="_41mXADT4EeOzOeovi9luYQ" name="prix" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OLq8sDT5EeOzOeovi9luYQ" name="Arbre">
+    <ownedAttribute xmi:id="_Yt4XMDT5EeOzOeovi9luYQ" name="Categorie" visibility="protected" type="_xulGcDT3EeOzOeovi9luYQ">
+      <ownedComment xmi:id="_7CHUEDUHEeOzOeovi9luYQ" annotatedElement="_Yt4XMDT5EeOzOeovi9luYQ"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YuFLgDT5EeOzOeovi9luYQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YuFykDT5EeOzOeovi9luYQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_cCInIDUCEeOzOeovi9luYQ" name="Utilisateur"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_N6Za8DUDEeOzOeovi9luYQ" name="Affichage des statistiques" useCase="_e1CzoDUCEeOzOeovi9luYQ _ojjq4DUDEeOzOeovi9luYQ _OxuZoDUFEeOzOeovi9luYQ _8bY0IDUHEeOzOeovi9luYQ">
+    <ownedUseCase xmi:id="_e1CzoDUCEeOzOeovi9luYQ" name="Choisir catégorie de produit" subject="_N6Za8DUDEeOzOeovi9luYQ">
+      <ownedComment xmi:id="_XcBlYDUHEeOzOeovi9luYQ" annotatedElement="_e1CzoDUCEeOzOeovi9luYQ">
+        <body>Ce cas d'utilisation permet à l'utilisateur de choisir une catégorie dont il souhaite avoir une visualisation statistique.</body>
+      </ownedComment>
+    </ownedUseCase>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WxbtEDUDEeOzOeovi9luYQ" name="Association_Actor1_to_Choisir catégorie de produit" visibility="package" memberEnd="_WxcUIDUDEeOzOeovi9luYQ _Wxc7MDUDEeOzOeovi9luYQ">
+    <ownedComment xmi:id="_etCRsDUDEeOzOeovi9luYQ" annotatedElement="_WxbtEDUDEeOzOeovi9luYQ">
+      <body xsi:nil="true"/>
+    </ownedComment>
+    <ownedEnd xmi:id="_WxcUIDUDEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_WxbtEDUDEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_Wxc7MDUDEeOzOeovi9luYQ" type="_e1CzoDUCEeOzOeovi9luYQ" association="_WxbtEDUDEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ojjq4DUDEeOzOeovi9luYQ" name="Visualiser historique sous forme de courbes" subject="_N6Za8DUDEeOzOeovi9luYQ">
+    <include xmi:id="_2K97wDUDEeOzOeovi9luYQ" addition="_e1CzoDUCEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_01VlkDUDEeOzOeovi9luYQ" name="Association_Actor1_to_Visualiser historique sous forme de courbes" memberEnd="_01WMoDUDEeOzOeovi9luYQ _01XawDUDEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_01WMoDUDEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_01VlkDUDEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_01XawDUDEeOzOeovi9luYQ" type="_ojjq4DUDEeOzOeovi9luYQ" association="_01VlkDUDEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_OxuZoDUFEeOzOeovi9luYQ" name="Visualiser produit le plus vendu" subject="_N6Za8DUDEeOzOeovi9luYQ">
+    <include xmi:id="_XdAuwDUFEeOzOeovi9luYQ" addition="_e1CzoDUCEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WTlokDUFEeOzOeovi9luYQ" name="Association_Utilisateur_to_Visualiser produit le plus vendu" memberEnd="_WTmPoDUFEeOzOeovi9luYQ _WToE0DUFEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_WTmPoDUFEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_WTlokDUFEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_WToE0DUFEeOzOeovi9luYQ" type="_OxuZoDUFEeOzOeovi9luYQ" association="_WTlokDUFEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8bY0IDUHEeOzOeovi9luYQ" name="Sélectionner la liste des produits/sous-catégories à afficher" subject="_N6Za8DUDEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Ui3xgDUIEeOzOeovi9luYQ" name="Association_Sélectionner la liste des produits/sous-catégories à afficher_to_Utilisateur" memberEnd="_Ui4YkDUIEeOzOeovi9luYQ _Ui4_oDUIEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_Ui4YkDUIEeOzOeovi9luYQ" type="_8bY0IDUHEeOzOeovi9luYQ" association="_Ui3xgDUIEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_Ui4_oDUIEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_Ui3xgDUIEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_EiKRgDUJEeOzOeovi9luYQ" name="Actor2"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_K3kUYDUJEeOzOeovi9luYQ" name="Gestion des catégories et articles" useCase="_W3HPkDUJEeOzOeovi9luYQ _cqjN0DUJEeOzOeovi9luYQ _nBJ1QDUJEeOzOeovi9luYQ _vo_00DUJEeOzOeovi9luYQ _zd_wcDUJEeOzOeovi9luYQ _bPJKUDUKEeOzOeovi9luYQ _ne8IADUKEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_W3HPkDUJEeOzOeovi9luYQ" name="Ajouter une catégorie" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <include xmi:id="_zua8oDUKEeOzOeovi9luYQ" addition="_ne8IADUKEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cqjN0DUJEeOzOeovi9luYQ" name="Ajouter un article" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <include xmi:id="_qL3dwDUJEeOzOeovi9luYQ" addition="_nBJ1QDUJEeOzOeovi9luYQ"/>
+    <include xmi:id="_2xF44DUJEeOzOeovi9luYQ" addition="_zd_wcDUJEeOzOeovi9luYQ"/>
+    <include xmi:id="_eup-IDUKEeOzOeovi9luYQ" addition="_bPJKUDUKEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_nBJ1QDUJEeOzOeovi9luYQ" name="Spécifier le prix d'un article" subject="_K3kUYDUJEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sncvYDUJEeOzOeovi9luYQ" name="Association_Ajouter une catégorie_to_Actor2" memberEnd="_sncvYTUJEeOzOeovi9luYQ _sndWcDUJEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_sncvYTUJEeOzOeovi9luYQ" type="_W3HPkDUJEeOzOeovi9luYQ" association="_sncvYDUJEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_sndWcDUJEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_sncvYDUJEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ta6zsDUJEeOzOeovi9luYQ" name="Association_Ajouter un article_to_Actor2" memberEnd="_ta7awDUJEeOzOeovi9luYQ _ta7awTUJEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_ta7awDUJEeOzOeovi9luYQ" type="_cqjN0DUJEeOzOeovi9luYQ" association="_ta6zsDUJEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_ta7awTUJEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_ta6zsDUJEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_vo_00DUJEeOzOeovi9luYQ" name="UseCaseNewModel7" subject="_K3kUYDUJEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_zd_wcDUJEeOzOeovi9luYQ" name="Spécifier le niveau de stock d'un article" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <ownedComment xmi:id="__A39wDUJEeOzOeovi9luYQ" annotatedElement="_zd_wcDUJEeOzOeovi9luYQ">
+      <body>Question pour J-M Normand: doit-on relier ce CU à l'utilisateur?</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_37KfUDUJEeOzOeovi9luYQ" name="Association_Spécifier le niveau de stock d'un article_to_Actor2" memberEnd="_37KfUTUJEeOzOeovi9luYQ _37KfUjUJEeOzOeovi9luYQ">
+    <ownedComment xmi:id="_7mT7YDUJEeOzOeovi9luYQ" annotatedElement="_37KfUDUJEeOzOeovi9luYQ">
+      <body>Empty comment</body>
+    </ownedComment>
+    <ownedComment xmi:id="_8aRH4DUJEeOzOeovi9luYQ" annotatedElement="_37KfUDUJEeOzOeovi9luYQ">
+      <body>Empty comment</body>
+    </ownedComment>
+    <ownedEnd xmi:id="_37KfUTUJEeOzOeovi9luYQ" type="_zd_wcDUJEeOzOeovi9luYQ" association="_37KfUDUJEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_37KfUjUJEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_37KfUDUJEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6yQBMDUJEeOzOeovi9luYQ" name="Association_Actor2_to_Spécifier le prix d'un article" memberEnd="_6yQoQDUJEeOzOeovi9luYQ _6yQoQTUJEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_6yQoQDUJEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_6yQBMDUJEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_6yQoQTUJEeOzOeovi9luYQ" type="_nBJ1QDUJEeOzOeovi9luYQ" association="_6yQBMDUJEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_bPJKUDUKEeOzOeovi9luYQ" name="Spécifier/modifier la catégorie mère d'un article" subject="_K3kUYDUJEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gDNWQDUKEeOzOeovi9luYQ" name="Association_Actor2_to_Spécifier la catégorie mère d'un article" memberEnd="_gDNWQTUKEeOzOeovi9luYQ _gDN9UDUKEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_gDNWQTUKEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_gDNWQDUKEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_gDN9UDUKEeOzOeovi9luYQ" type="_bPJKUDUKEeOzOeovi9luYQ" association="_gDNWQDUKEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ne8IADUKEeOzOeovi9luYQ" name="Spécifier la cattégorie mère d'une catégorie" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <ownedComment xmi:id="_7ndVcDUKEeOzOeovi9luYQ" annotatedElement="_ne8IADUKEeOzOeovi9luYQ">
+      <body>La catégorie racine n'a pas de catégorie mère!</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_suk1oDUKEeOzOeovi9luYQ" name="Association_Actor2_to_Spécifier la cattégorie mère d'une catégorie" memberEnd="_sulcsDUKEeOzOeovi9luYQ _sulcsTUKEeOzOeovi9luYQ">
+    <ownedEnd xmi:id="_sulcsDUKEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_suk1oDUKEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_sulcsTUKEeOzOeovi9luYQ" type="_ne8IADUKEeOzOeovi9luYQ" association="_suk1oDUKEeOzOeovi9luYQ"/>
+  </packagedElement>
+</uml:Model>
