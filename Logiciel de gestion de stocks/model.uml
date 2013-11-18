@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_NLnKsDT1EeOzOeovi9luYQ" name="NewModel">
-  <packagedElement xmi:type="uml:Class" xmi:id="_xulGcDT3EeOzOeovi9luYQ" name="Categorie">
-    <ownedAttribute xmi:id="_0gUOQDT3EeOzOeovi9luYQ" name="nom" visibility="protected">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0ghCkDT3EeOzOeovi9luYQ"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0ghpoDT3EeOzOeovi9luYQ" value="1"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:id="_ZFtd0DT4EeOzOeovi9luYQ" name="property2" visibility="package">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xulGcDT3EeOzOeovi9luYQ" name="Category">
+    <ownedAttribute xmi:id="_ZFtd0DT4EeOzOeovi9luYQ" name="children" visibility="protected" type="_xulGcDT3EeOzOeovi9luYQ">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZF5EADT4EeOzOeovi9luYQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZF5EATT4EeOzOeovi9luYQ" value="1"/>
     </ownedAttribute>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_lk9MwDT4EeOzOeovi9luYQ" name="Produit">
-    <generalization xmi:id="_HFSI0DT5EeOzOeovi9luYQ" general="_xulGcDT3EeOzOeovi9luYQ"/>
-    <ownedAttribute xmi:id="_nhS9oDT4EeOzOeovi9luYQ" name="prix" visibility="protected">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+    <ownedAttribute xmi:id="_KCC4kD2DEeO_C6d07t7N0A" name="name" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
-    <ownedOperation xmi:id="_3U1H0DT4EeOzOeovi9luYQ" name="Produit">
-      <ownedParameter xmi:id="_41mXADT4EeOzOeovi9luYQ" name="prix" visibility="protected">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+    <ownedOperation xmi:id="_qHcHsD2DEeO_C6d07t7N0A" name="Category">
+      <ownedParameter xmi:id="_r62mED2DEeO_C6d07t7N0A" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_OLq8sDT5EeOzOeovi9luYQ" name="Arbre">
-    <ownedAttribute xmi:id="_Yt4XMDT5EeOzOeovi9luYQ" name="Categorie" visibility="protected" type="_xulGcDT3EeOzOeovi9luYQ">
-      <ownedComment xmi:id="_7CHUEDUHEeOzOeovi9luYQ" annotatedElement="_Yt4XMDT5EeOzOeovi9luYQ"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YuFLgDT5EeOzOeovi9luYQ" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YuFykDT5EeOzOeovi9luYQ" value="1"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lk9MwDT4EeOzOeovi9luYQ" name="Product">
+    <generalization xmi:id="_s7yrYD2TEeO_C6d07t7N0A" general="_xulGcDT3EeOzOeovi9luYQ"/>
+    <ownedAttribute xmi:id="_nhS9oDT4EeOzOeovi9luYQ" name="price" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
     </ownedAttribute>
+    <ownedAttribute xmi:id="_pcn-MD2FEeO_C6d07t7N0A" name="quantityLevels" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_k0I0kD9QEeO_C6d07t7N0A" name="currentQuantity">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_k0I0kT9QEeO_C6d07t7N0A" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_k0O7MD9QEeO_C6d07t7N0A" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_3U1H0DT4EeOzOeovi9luYQ" name="Product">
+      <ownedParameter xmi:id="_41mXADT4EeOzOeovi9luYQ" name="price" visibility="protected">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_z3r5wD2DEeO_C6d07t7N0A" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_vWiicD2GEeO_C6d07t7N0A" name="parentCategory" type="_xulGcDT3EeOzOeovi9luYQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_8EMWQD2FEeO_C6d07t7N0A" name="sell">
+      <ownedParameter xmi:id="_9g6L4D2FEeO_C6d07t7N0A" name="quantity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_GbEDcD2GEeO_C6d07t7N0A" direction="return">
+        <name xsi:nil="true"/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBoolean"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Actor" xmi:id="_cCInIDUCEeOzOeovi9luYQ" name="Utilisateur"/>
-  <packagedElement xmi:type="uml:Component" xmi:id="_N6Za8DUDEeOzOeovi9luYQ" name="Affichage des statistiques" useCase="_e1CzoDUCEeOzOeovi9luYQ _ojjq4DUDEeOzOeovi9luYQ _OxuZoDUFEeOzOeovi9luYQ _8bY0IDUHEeOzOeovi9luYQ">
-    <ownedUseCase xmi:id="_e1CzoDUCEeOzOeovi9luYQ" name="Choisir catégorie de produit" subject="_N6Za8DUDEeOzOeovi9luYQ">
+  <packagedElement xmi:type="uml:Component" xmi:id="_N6Za8DUDEeOzOeovi9luYQ" name="Affichage des statistiques" useCase="_e1CzoDUCEeOzOeovi9luYQ _ojjq4DUDEeOzOeovi9luYQ _8bY0IDUHEeOzOeovi9luYQ _DcRbQD1_EeO_C6d07t7N0A">
+    <ownedUseCase xmi:id="_e1CzoDUCEeOzOeovi9luYQ" name="Choisir catégorie de produits" subject="_N6Za8DUDEeOzOeovi9luYQ">
       <ownedComment xmi:id="_XcBlYDUHEeOzOeovi9luYQ" annotatedElement="_e1CzoDUCEeOzOeovi9luYQ">
         <body>Ce cas d'utilisation permet à l'utilisateur de choisir une catégorie dont il souhaite avoir une visualisation statistique.</body>
       </ownedComment>
     </ownedUseCase>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_WxbtEDUDEeOzOeovi9luYQ" name="Association_Actor1_to_Choisir catégorie de produit" visibility="package" memberEnd="_WxcUIDUDEeOzOeovi9luYQ _Wxc7MDUDEeOzOeovi9luYQ">
-    <ownedComment xmi:id="_etCRsDUDEeOzOeovi9luYQ" annotatedElement="_WxbtEDUDEeOzOeovi9luYQ">
-      <body xsi:nil="true"/>
-    </ownedComment>
-    <ownedEnd xmi:id="_WxcUIDUDEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_WxbtEDUDEeOzOeovi9luYQ"/>
-    <ownedEnd xmi:id="_Wxc7MDUDEeOzOeovi9luYQ" type="_e1CzoDUCEeOzOeovi9luYQ" association="_WxbtEDUDEeOzOeovi9luYQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_ojjq4DUDEeOzOeovi9luYQ" name="Visualiser historique sous forme de courbes" subject="_N6Za8DUDEeOzOeovi9luYQ">
     <include xmi:id="_2K97wDUDEeOzOeovi9luYQ" addition="_e1CzoDUCEeOzOeovi9luYQ"/>
@@ -52,20 +61,19 @@
     <ownedEnd xmi:id="_01WMoDUDEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_01VlkDUDEeOzOeovi9luYQ"/>
     <ownedEnd xmi:id="_01XawDUDEeOzOeovi9luYQ" type="_ojjq4DUDEeOzOeovi9luYQ" association="_01VlkDUDEeOzOeovi9luYQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_OxuZoDUFEeOzOeovi9luYQ" name="Visualiser produit le plus vendu" subject="_N6Za8DUDEeOzOeovi9luYQ">
-    <include xmi:id="_XdAuwDUFEeOzOeovi9luYQ" addition="_e1CzoDUCEeOzOeovi9luYQ"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_WTlokDUFEeOzOeovi9luYQ" name="Association_Utilisateur_to_Visualiser produit le plus vendu" memberEnd="_WTmPoDUFEeOzOeovi9luYQ _WToE0DUFEeOzOeovi9luYQ">
     <ownedEnd xmi:id="_WTmPoDUFEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_WTlokDUFEeOzOeovi9luYQ"/>
-    <ownedEnd xmi:id="_WToE0DUFEeOzOeovi9luYQ" type="_OxuZoDUFEeOzOeovi9luYQ" association="_WTlokDUFEeOzOeovi9luYQ"/>
+    <ownedEnd xmi:id="_WToE0DUFEeOzOeovi9luYQ" association="_WTlokDUFEeOzOeovi9luYQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8bY0IDUHEeOzOeovi9luYQ" name="Sélectionner la liste des produits/sous-catégories à afficher" subject="_N6Za8DUDEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8bY0IDUHEeOzOeovi9luYQ" name="Sélectionner la liste des produits/sous-catégories à afficher" subject="_N6Za8DUDEeOzOeovi9luYQ">
+    <include xmi:id="_P-HpADcuEeOO_o-DK3rJpg" addition="_e1CzoDUCEeOzOeovi9luYQ"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_Ui3xgDUIEeOzOeovi9luYQ" name="Association_Sélectionner la liste des produits/sous-catégories à afficher_to_Utilisateur" memberEnd="_Ui4YkDUIEeOzOeovi9luYQ _Ui4_oDUIEeOzOeovi9luYQ">
     <ownedEnd xmi:id="_Ui4YkDUIEeOzOeovi9luYQ" type="_8bY0IDUHEeOzOeovi9luYQ" association="_Ui3xgDUIEeOzOeovi9luYQ"/>
     <ownedEnd xmi:id="_Ui4_oDUIEeOzOeovi9luYQ" type="_cCInIDUCEeOzOeovi9luYQ" association="_Ui3xgDUIEeOzOeovi9luYQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_EiKRgDUJEeOzOeovi9luYQ" name="Actor2"/>
-  <packagedElement xmi:type="uml:Component" xmi:id="_K3kUYDUJEeOzOeovi9luYQ" name="Gestion des catégories et articles" useCase="_W3HPkDUJEeOzOeovi9luYQ _cqjN0DUJEeOzOeovi9luYQ _nBJ1QDUJEeOzOeovi9luYQ _vo_00DUJEeOzOeovi9luYQ _zd_wcDUJEeOzOeovi9luYQ _bPJKUDUKEeOzOeovi9luYQ _ne8IADUKEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_EiKRgDUJEeOzOeovi9luYQ" name="Utilisateur"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_K3kUYDUJEeOzOeovi9luYQ" name="Gestion des catégories et articles" useCase="_W3HPkDUJEeOzOeovi9luYQ _cqjN0DUJEeOzOeovi9luYQ _nBJ1QDUJEeOzOeovi9luYQ _vo_00DUJEeOzOeovi9luYQ _zd_wcDUJEeOzOeovi9luYQ _bPJKUDUKEeOzOeovi9luYQ _ne8IADUKEeOzOeovi9luYQ _c1fy0DcoEeOO_o-DK3rJpg _s6oqYDcoEeOO_o-DK3rJpg _0BYqoDcoEeOO_o-DK3rJpg _2OJdIDcoEeOO_o-DK3rJpg _N4o_sDctEeOO_o-DK3rJpg"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_W3HPkDUJEeOzOeovi9luYQ" name="Ajouter une catégorie" subject="_K3kUYDUJEeOzOeovi9luYQ">
     <include xmi:id="_zua8oDUKEeOzOeovi9luYQ" addition="_ne8IADUKEeOzOeovi9luYQ"/>
   </packagedElement>
@@ -73,6 +81,9 @@
     <include xmi:id="_qL3dwDUJEeOzOeovi9luYQ" addition="_nBJ1QDUJEeOzOeovi9luYQ"/>
     <include xmi:id="_2xF44DUJEeOzOeovi9luYQ" addition="_zd_wcDUJEeOzOeovi9luYQ"/>
     <include xmi:id="_eup-IDUKEeOzOeovi9luYQ" addition="_bPJKUDUKEeOzOeovi9luYQ"/>
+    <include xmi:id="_h6U-oDcoEeOO_o-DK3rJpg" addition="_c1fy0DcoEeOO_o-DK3rJpg"/>
+    <include xmi:id="_RKQeQDcpEeOO_o-DK3rJpg" addition="_0BYqoDcoEeOO_o-DK3rJpg"/>
+    <include xmi:id="_XHyP0DctEeOO_o-DK3rJpg" addition="_N4o_sDctEeOO_o-DK3rJpg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_nBJ1QDUJEeOzOeovi9luYQ" name="Spécifier le prix d'un article" subject="_K3kUYDUJEeOzOeovi9luYQ"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_sncvYDUJEeOzOeovi9luYQ" name="Association_Ajouter une catégorie_to_Actor2" memberEnd="_sncvYTUJEeOzOeovi9luYQ _sndWcDUJEeOzOeovi9luYQ">
@@ -117,4 +128,113 @@
     <ownedEnd xmi:id="_sulcsDUKEeOzOeovi9luYQ" type="_EiKRgDUJEeOzOeovi9luYQ" association="_suk1oDUKEeOzOeovi9luYQ"/>
     <ownedEnd xmi:id="_sulcsTUKEeOzOeovi9luYQ" type="_ne8IADUKEeOzOeovi9luYQ" association="_suk1oDUKEeOzOeovi9luYQ"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_c1fy0DcoEeOO_o-DK3rJpg" name="Gérer fournisseurs" subject="_K3kUYDUJEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gUu50DcoEeOO_o-DK3rJpg" name="Association_Ajouter fournisseur_to_Actor2" memberEnd="_gUu50TcoEeOO_o-DK3rJpg _gVbdYDcoEeOO_o-DK3rJpg">
+    <ownedEnd xmi:id="_gUu50TcoEeOO_o-DK3rJpg" type="_c1fy0DcoEeOO_o-DK3rJpg" association="_gUu50DcoEeOO_o-DK3rJpg"/>
+    <ownedEnd xmi:id="_gVbdYDcoEeOO_o-DK3rJpg" type="_EiKRgDUJEeOzOeovi9luYQ" association="_gUu50DcoEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_s6oqYDcoEeOO_o-DK3rJpg" name="Créer fournisseur" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <extend xmi:id="_1iNkMDcoEeOO_o-DK3rJpg" extendedCase="_c1fy0DcoEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_0BYqoDcoEeOO_o-DK3rJpg" name="spécifier le fournisseur d'un article" subject="_K3kUYDUJEeOzOeovi9luYQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_2OJdIDcoEeOO_o-DK3rJpg" name="Supprimer fournisseur" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <extend xmi:id="_708GgDcoEeOO_o-DK3rJpg" extendedCase="_c1fy0DcoEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TeM20DcpEeOO_o-DK3rJpg" name="Association_Actor2_to_spécifier le fournisseur d'un article" memberEnd="_TeNd4DcpEeOO_o-DK3rJpg _TeNd4TcpEeOO_o-DK3rJpg">
+    <ownedEnd xmi:id="_TeNd4DcpEeOO_o-DK3rJpg" type="_EiKRgDUJEeOzOeovi9luYQ" association="_TeM20DcpEeOO_o-DK3rJpg"/>
+    <ownedEnd xmi:id="_TeNd4TcpEeOO_o-DK3rJpg" type="_0BYqoDcoEeOO_o-DK3rJpg" association="_TeM20DcpEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_pxpqwDcpEeOO_o-DK3rJpg" name="Gestion de stock" useCase="_-VNOYDcpEeOO_o-DK3rJpg _BxQegDcqEeOO_o-DK3rJpg _ce3JkDcqEeOO_o-DK3rJpg _c8zCwDcqEeOO_o-DK3rJpg _47magDcrEeOO_o-DK3rJpg _-LY5IDcrEeOO_o-DK3rJpg _HC_L8DcsEeOO_o-DK3rJpg _IqTvEDcsEeOO_o-DK3rJpg _hwz5cDcsEeOO_o-DK3rJpg _lx_P4DcsEeOO_o-DK3rJpg _7XKzIDctEeOO_o-DK3rJpg"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_sasJkDcpEeOO_o-DK3rJpg" name="Utilisateur"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_-VNOYDcpEeOO_o-DK3rJpg" name="UseCaseNewModel15" subject="_pxpqwDcpEeOO_o-DK3rJpg"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_BxQegDcqEeOO_o-DK3rJpg" name="Modifier le niveau de stock" subject="_pxpqwDcpEeOO_o-DK3rJpg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SwRkYDcqEeOO_o-DK3rJpg" name="Association_Modifier le niveau de stock_to_Actor3" memberEnd="_SwRkYTcqEeOO_o-DK3rJpg _SwSLcDcqEeOO_o-DK3rJpg">
+    <ownedEnd xmi:id="_SwRkYTcqEeOO_o-DK3rJpg" type="_BxQegDcqEeOO_o-DK3rJpg" association="_SwRkYDcqEeOO_o-DK3rJpg"/>
+    <ownedEnd xmi:id="_SwSLcDcqEeOO_o-DK3rJpg" type="_sasJkDcpEeOO_o-DK3rJpg" association="_SwRkYDcqEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ce3JkDcqEeOO_o-DK3rJpg" name="Valider/reception une commande" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_XdQbcDcrEeOO_o-DK3rJpg" extendedCase="_BxQegDcqEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_c8zCwDcqEeOO_o-DK3rJpg" name="Modifier le stock manuelement" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_TCgHYDcrEeOO_o-DK3rJpg" extendedCase="_BxQegDcqEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_47magDcrEeOO_o-DK3rJpg" name="Similer les ventes" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <include xmi:id="_ZBZ5UDcsEeOO_o-DK3rJpg" addition="_IqTvEDcsEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_-LY5IDcrEeOO_o-DK3rJpg" name="Lancer simulation" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_XBpBADcsEeOO_o-DK3rJpg" extendedCase="_47magDcrEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HC_L8DcsEeOO_o-DK3rJpg" name="Annuler simulation" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_X5ICoDcsEeOO_o-DK3rJpg" extendedCase="_47magDcrEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_IqTvEDcsEeOO_o-DK3rJpg" name="Choisir les parametres de simulation" subject="_pxpqwDcpEeOO_o-DK3rJpg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_T-WPIDcsEeOO_o-DK3rJpg" name="Association_Similer les ventes_to_Actor3" memberEnd="_T-WPITcsEeOO_o-DK3rJpg _T-W2MDcsEeOO_o-DK3rJpg">
+    <ownedEnd xmi:id="_T-WPITcsEeOO_o-DK3rJpg" type="_47magDcrEeOO_o-DK3rJpg" association="_T-WPIDcsEeOO_o-DK3rJpg"/>
+    <ownedEnd xmi:id="_T-W2MDcsEeOO_o-DK3rJpg" type="_sasJkDcpEeOO_o-DK3rJpg" association="_T-WPIDcsEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_hwz5cDcsEeOO_o-DK3rJpg" name="Choisir vitesse de similation" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_lZnzMDcsEeOO_o-DK3rJpg" extendedCase="_IqTvEDcsEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_lx_P4DcsEeOO_o-DK3rJpg" name="Definir les seuils limites" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_GMArMDctEeOO_o-DK3rJpg" extendedCase="_IqTvEDcsEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_N4o_sDctEeOO_o-DK3rJpg" name="Spécifier  les seuils limites" subject="_K3kUYDUJEeOzOeovi9luYQ">
+    <ownedComment xmi:id="_hNVjgDctEeOO_o-DK3rJpg" annotatedElement="_N4o_sDctEeOO_o-DK3rJpg">
+      <body>Seuils limites et niveau commandes automatiques</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_7XKzIDctEeOO_o-DK3rJpg" name="Créer commande" subject="_pxpqwDcpEeOO_o-DK3rJpg">
+    <extend xmi:id="_-I1pgDctEeOO_o-DK3rJpg" extendedCase="_BxQegDcqEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jkS-YDcuEeOO_o-DK3rJpg" name="Association_Utilisateur_to_Visualiser ventes en temps réel" memberEnd="_jkS-YTcuEeOO_o-DK3rJpg _jkTlcDcuEeOO_o-DK3rJpg">
+    <ownedEnd xmi:id="_jkS-YTcuEeOO_o-DK3rJpg" type="_cCInIDUCEeOzOeovi9luYQ" association="_jkS-YDcuEeOO_o-DK3rJpg"/>
+    <ownedEnd xmi:id="_jkTlcDcuEeOO_o-DK3rJpg" association="_jkS-YDcuEeOO_o-DK3rJpg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DcRbQD1_EeO_C6d07t7N0A" name="Visualiser niveaux en temps réel" subject="_N6Za8DUDEeOzOeovi9luYQ _grLgQD2REeO_C6d07t7N0A">
+    <include xmi:id="_LbJ9YD1_EeO_C6d07t7N0A" addition="_e1CzoDUCEeOzOeovi9luYQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IP0p0D1_EeO_C6d07t7N0A" name="Association_Utilisateur_to_Visualiser niveaux en temps réel" memberEnd="_IP0p0T1_EeO_C6d07t7N0A _IP0p0j1_EeO_C6d07t7N0A">
+    <ownedEnd xmi:id="_IP0p0T1_EeO_C6d07t7N0A" type="_cCInIDUCEeOzOeovi9luYQ" association="_IP0p0D1_EeO_C6d07t7N0A"/>
+    <ownedEnd xmi:id="_IP0p0j1_EeO_C6d07t7N0A" type="_DcRbQD1_EeO_C6d07t7N0A" association="_IP0p0D1_EeO_C6d07t7N0A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_grLgQD2REeO_C6d07t7N0A" clientDependency="_wdPDwD2REeO_C6d07t7N0A _vYwnoD2UEeO_C6d07t7N0A" name="graphOfQuantities" useCase="_DcRbQD1_EeO_C6d07t7N0A">
+    <ownedAttribute xmi:id="_2jDygD2REeO_C6d07t7N0A" name="categoriesToShow" visibility="protected" type="_xulGcDT3EeOzOeovi9luYQ"/>
+    <ownedAttribute xmi:id="_iV7-ukh-EeO24NaTFVM0VA" name="nbOfDays" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iWILikh-EeO24NaTFVM0VA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iWILmEh-EeO24NaTFVM0VA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_y9-uQEh-EeO24NaTFVM0VA" name="date" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y9-uQUh-EeO24NaTFVM0VA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y9-uQkh-EeO24NaTFVM0VA" value="1"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:id="_wdPDwD2REeO_C6d07t7N0A" client="_grLgQD2REeO_C6d07t7N0A"/>
+    <interfaceRealization xmi:id="_vYwnoD2UEeO_C6d07t7N0A" client="_grLgQD2REeO_C6d07t7N0A" supplier="_XuRIQD2UEeO_C6d07t7N0A" contract="_XuRIQD2UEeO_C6d07t7N0A"/>
+    <ownedOperation xmi:id="_Eff7YD2WEeO_C6d07t7N0A" name="VisualierCourbes">
+      <ownedParameter xmi:id="_4ILIUD8UEeO_C6d07t7N0A" name="products" type="_lk9MwDT4EeOzOeovi9luYQ"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_XuRIQD2UEeO_C6d07t7N0A" name="Canvas">
+    <ownedOperation xmi:id="_zfd-UD2UEeO_C6d07t7N0A" name="paint">
+      <ownedParameter xmi:id="_07tS0D2UEeO_C6d07t7N0A" name="g"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IcxCMD2WEeO_C6d07t7N0A" name="ChooseCategory">
+    <generalization xmi:id="_bwJbcD8XEeO_C6d07t7N0A" general="_Y10_YD8XEeO_C6d07t7N0A"/>
+    <ownedAttribute xmi:id="_hmN28D8XEeO_C6d07t7N0A" name="rootCategory" visibility="protected" type="_xulGcDT3EeOzOeovi9luYQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hmT9kD8XEeO_C6d07t7N0A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hmT9kT8XEeO_C6d07t7N0A" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_C64VkD8YEeO_C6d07t7N0A" name="TreeModel" visibility="protected">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C64VkT8YEeO_C6d07t7N0A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C64Vkj8YEeO_C6d07t7N0A" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_sv7WUD8XEeO_C6d07t7N0A" name="buildTreeModel"/>
+    <ownedOperation xmi:id="_z-9I0D8XEeO_C6d07t7N0A" name="ChooseCategory">
+      <ownedParameter xmi:id="_3REZ0D8XEeO_C6d07t7N0A" name="rootCategory" type="_xulGcDT3EeOzOeovi9luYQ"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y10_YD8XEeO_C6d07t7N0A" name="JTree"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ri8scEh_EeO24NaTFVM0VA" name="DataBaseSync"/>
 </uml:Model>
